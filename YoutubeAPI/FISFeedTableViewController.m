@@ -34,6 +34,11 @@
             NSLog(@"%@",self.FISVideoResultsArray);
         }
         
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self.tableView reloadData];
+            NSLog(@"%lu" ,self.FISVideoResultsArray.count);
+            
+        }];
         
     }];
     
@@ -60,9 +65,25 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    YoutubeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    YoutubeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"youtubeReuseCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    
+    YoutubeVideo *videoAtThisRow = self.FISVideoResultsArray[indexPath.row];
+    
+    //CONVERT IMAGE URL TO UIIMAGE
+    NSURL* imageURL = [NSURL URLWithString:videoAtThisRow.thumbnailURL];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    cell.videoThumbnail.image = image;
+    
+    //SET UI LABELS WITH VIDEO INFO
+    cell.videoTitleLabel.text =videoAtThisRow.titleOfVideo;
+    cell.channelNameLabel.text = videoAtThisRow.titleOfChannel;
+    cell.viewCountLabel.text = [NSString stringWithFormat:@"%@ views", videoAtThisRow.totalViews];
+    NSLog(@"%@", videoAtThisRow);
+
+    
     
     return cell;
 }

@@ -27,6 +27,7 @@ NSString *const YOUTUBE_STATS_URL = @"https://www.googleapis.com/youtube/v3/vide
                                                       @"part" : @"snippet",
                                                      @"q": query,
                                                      @"order": @"viewCount",
+                                                      @"maxResults": @20 ,
                                                     @"key" : YOUTUBE_API_KEY};
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
