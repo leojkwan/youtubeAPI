@@ -10,7 +10,7 @@
 #import "YouTubeAPIClient.h"
 #import "YoutubeTableViewCell.h"
 #import "YoutubeVideo.h"
-
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
 
 @interface FISFeedTableViewController ()
 
@@ -29,6 +29,7 @@
 
     [YouTubeAPIClient getVideosWithQuery:@"FlatironSchool" completionBlock:^(NSDictionary *response) {
         for (NSDictionary *video in response[@"items"]) {
+            NSLog(@"%@",response);
             YoutubeVideo *videoAtThisIndex = [YoutubeVideo videoFromDictionary:video];
             [self.FISVideoResultsArray addObject:videoAtThisIndex];
             NSLog(@"%@",self.FISVideoResultsArray);
@@ -86,6 +87,19 @@
     
     
     return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+//    YoutubeVideo *videoAtThisIndex = self.FISVideoResultsArray[indexPath.row];
+//    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoAtThisIndex.videoID];
+//    
+//    NSLog(@"%@", videoAtThisIndex.videoID);
+//    
+//    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+//    [videoPlayerViewController.moviePlayer play];
+    
 }
 
 

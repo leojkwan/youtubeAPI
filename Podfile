@@ -5,6 +5,8 @@ target 'YoutubeAPI' do
 
 pod "AFNetworking", "~> 2.0"
 pod "youtube-ios-player-helper"
+pod "XCDYouTubeKit", "~> 2.2.0"
+
 
 
 end

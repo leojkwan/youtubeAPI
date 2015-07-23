@@ -20,14 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - XCDYouTubeKit (2.2.0)
   - youtube-ios-player-helper (0.1.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - XCDYouTubeKit (~> 2.2.0)
   - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  XCDYouTubeKit: 920ff5dfdf37f0f41b19610c5270b2ed23b05b13
   youtube-ios-player-helper: fccae0f10449976a025a95328e3c42ab521f93cb
 
 COCOAPODS: 0.37.2

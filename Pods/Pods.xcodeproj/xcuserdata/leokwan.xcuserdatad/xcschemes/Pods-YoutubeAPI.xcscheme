@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A8AFFE2ACC9AD3D6E7762FD"
+               BlueprintIdentifier = "BD826E627C77515C1CED0E18"
                BuildableName = "libPods-YoutubeAPI.a"
                BlueprintName = "Pods-YoutubeAPI"
                ReferencedContainer = "container:Pods.xcodeproj">
