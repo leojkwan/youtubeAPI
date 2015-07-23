@@ -15,8 +15,6 @@
 		9405E86D1B5FF6290086A641 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9405E86B1B5FF6290086A641 /* LaunchScreen.xib */; };
 		9405E8791B5FF6290086A641 /* YoutubeAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9405E8781B5FF6290086A641 /* YoutubeAPITests.m */; };
 		9405E88B1B5FF82F0086A641 /* FISFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9405E8861B5FF82F0086A641 /* FISFeedTableViewController.m */; };
-		9405E88C1B5FF82F0086A641 /* ObjectiveCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9405E8881B5FF82F0086A641 /* ObjectiveCTableViewController.m */; };
-		9405E88D1B5FF82F0086A641 /* SwiftFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9405E88A1B5FF82F0086A641 /* SwiftFeedTableViewController.m */; };
 		9405E8901B5FF8F70086A641 /* YoutubeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9405E88F1B5FF8F70086A641 /* YoutubeTableViewCell.m */; };
 		9405E8931B5FF97B0086A641 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9405E8921B5FF97B0086A641 /* Constants.m */; };
 		9405E89A1B5FFAE10086A641 /* YoutubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9405E8991B5FFAE10086A641 /* YoutubeVideo.m */; };
@@ -48,10 +46,6 @@
 		9405E8781B5FF6290086A641 /* YoutubeAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoutubeAPITests.m; sourceTree = "<group>"; };
 		9405E8851B5FF82F0086A641 /* FISFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISFeedTableViewController.h; sourceTree = "<group>"; };
 		9405E8861B5FF82F0086A641 /* FISFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISFeedTableViewController.m; sourceTree = "<group>"; };
-		9405E8871B5FF82F0086A641 /* ObjectiveCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCTableViewController.h; sourceTree = "<group>"; };
-		9405E8881B5FF82F0086A641 /* ObjectiveCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTableViewController.m; sourceTree = "<group>"; };
-		9405E8891B5FF82F0086A641 /* SwiftFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftFeedTableViewController.h; sourceTree = "<group>"; };
-		9405E88A1B5FF82F0086A641 /* SwiftFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftFeedTableViewController.m; sourceTree = "<group>"; };
 		9405E88E1B5FF8F70086A641 /* YoutubeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubeTableViewCell.h; sourceTree = "<group>"; };
 		9405E88F1B5FF8F70086A641 /* YoutubeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeTableViewCell.m; sourceTree = "<group>"; };
 		9405E8911B5FF97B0086A641 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -159,10 +153,6 @@
 			children = (
 				9405E8851B5FF82F0086A641 /* FISFeedTableViewController.h */,
 				9405E8861B5FF82F0086A641 /* FISFeedTableViewController.m */,
-				9405E8871B5FF82F0086A641 /* ObjectiveCTableViewController.h */,
-				9405E8881B5FF82F0086A641 /* ObjectiveCTableViewController.m */,
-				9405E8891B5FF82F0086A641 /* SwiftFeedTableViewController.h */,
-				9405E88A1B5FF82F0086A641 /* SwiftFeedTableViewController.m */,
 			);
 			name = "Table View Controllers";
 			sourceTree = "<group>";
@@ -328,10 +318,8 @@
 				9405E8901B5FF8F70086A641 /* YoutubeTableViewCell.m in Sources */,
 				9405E89D1B5FFAF30086A641 /* YouTubeAPIClient.m in Sources */,
 				9405E8621B5FF6290086A641 /* AppDelegate.m in Sources */,
-				9405E88D1B5FF82F0086A641 /* SwiftFeedTableViewController.m in Sources */,
 				9405E85F1B5FF6290086A641 /* main.m in Sources */,
 				9405E8931B5FF97B0086A641 /* Constants.m in Sources */,
-				9405E88C1B5FF82F0086A641 /* ObjectiveCTableViewController.m in Sources */,
 				9405E89A1B5FFAE10086A641 /* YoutubeVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

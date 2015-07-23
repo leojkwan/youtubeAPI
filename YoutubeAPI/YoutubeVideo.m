@@ -21,7 +21,7 @@
     video.videoID = videoDictionary[@"id"][@"videoId"];
     video.totalViews = videoDictionary[@"snippet"][@""];
     video.thumbnailURL = videoDictionary[@"snippet"][@"thumbnails"][@"high"][@"url"];
-
+    
     
     return video;
 }

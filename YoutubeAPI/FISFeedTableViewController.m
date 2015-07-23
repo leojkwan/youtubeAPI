@@ -10,7 +10,6 @@
 #import "YouTubeAPIClient.h"
 #import "YoutubeTableViewCell.h"
 #import "YoutubeVideo.h"
-#import <XCDYouTubeKit/XCDYouTubeKit.h>
 
 @interface FISFeedTableViewController ()
 
@@ -27,19 +26,30 @@
     self.FISVideoResultsArray = [[NSMutableArray alloc] init];
     
 
-    [YouTubeAPIClient getVideosWithQuery:@"FlatironSchool" completionBlock:^(NSDictionary *response) {
+    [YouTubeAPIClient getVideosWithQuery:@"Flatiron School" completionBlock:^(NSDictionary *response) {
         for (NSDictionary *video in response[@"items"]) {
             NSLog(@"%@",response);
             YoutubeVideo *videoAtThisIndex = [YoutubeVideo videoFromDictionary:video];
             [self.FISVideoResultsArray addObject:videoAtThisIndex];
-            NSLog(@"%@",self.FISVideoResultsArray);
+            NSLog(@"%@", videoAtThisIndex.videoID);
         }
         
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.tableView reloadData];
-            NSLog(@"%lu" ,self.FISVideoResultsArray.count);
-            
-        }];
+
+        
+        for(YoutubeVideo *videoAtThisIndex in self.FISVideoResultsArray) {
+            [YouTubeAPIClient getVideosStatsWithVideoID:videoAtThisIndex.videoID completionBlock:^(NSDictionary *response ) {
+                NSLog(@"%@", response);
+                NSString *viewCountForThisVideo = response[@"items"][0][@"statistics"][@"viewCount"];
+                videoAtThisIndex.totalViews = viewCountForThisVideo;
+                
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [self.tableView reloadData];
+                    NSLog(@"%lu" ,self.FISVideoResultsArray.count);
+                    
+                }];
+        
+             }];
+        }
         
     }];
     
@@ -66,6 +76,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     YoutubeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"youtubeReuseCell" forIndexPath:indexPath];
     
     
@@ -81,6 +92,7 @@
     //SET UI LABELS WITH VIDEO INFO
     cell.videoTitleLabel.text =videoAtThisRow.titleOfVideo;
     cell.channelNameLabel.text = videoAtThisRow.titleOfChannel;
+//    cell.viewCountLabel.text = videoAtThisRow.totalViews;
     cell.viewCountLabel.text = [NSString stringWithFormat:@"%@ views", videoAtThisRow.totalViews];
     NSLog(@"%@", videoAtThisRow);
 

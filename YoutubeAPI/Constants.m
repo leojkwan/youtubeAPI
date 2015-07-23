@@ -10,6 +10,6 @@
 
 @implementation Constants
 
-NSString *const YOUTUBE_API_KEY = @"AIzaSyABUmAr71CIBKTXgXEHFX0LA_BSNWoss1M";
+NSString *const YOUTUBE_API_KEY = @"AIzaSyC6DjIUPSZbRW2KwjygpykPvgDVJ2q1__M";
 
 @end

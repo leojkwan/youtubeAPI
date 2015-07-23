@@ -45,9 +45,10 @@ NSString *const YOUTUBE_STATS_URL = @"https://www.googleapis.com/youtube/v3/vide
 
 +(void) getVideosStatsWithVideoID:(NSString *)videoID completionBlock:(void (^) (NSDictionary *)) completionBlock {
 
+    
     NSDictionary *params = @{
                              @"part": @"statistics",
-                             @"id": videoID,
+                              @"id": videoID,
                              @"key" : YOUTUBE_API_KEY};
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -59,8 +60,10 @@ NSString *const YOUTUBE_STATS_URL = @"https://www.googleapis.com/youtube/v3/vide
         NSLog(@"%@", error);
     }];
     
-
+    
 }
+
+
 
 
 
